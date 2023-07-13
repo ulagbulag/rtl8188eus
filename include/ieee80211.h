@@ -1529,7 +1529,7 @@ enum ieee80211_state {
 	(((Addr[2]) & 0xff) == 0xff) && (((Addr[3]) & 0xff) == 0xff) && (((Addr[4]) & 0xff) == 0xff) && \
 				     (((Addr[5]) & 0xff) == 0xff))
 #else
-#if (LINUX_VERSION_CODE < KERNEL_VERSION(5, 18, 00))
+#if (LINUX_VERSION_CODE < KERNEL_VERSION(5, 14, 00))
 extern __inline int is_multicast_mac_addr(const u8 *addr)
 {
 	return (addr[0] != 0xff) && (0x01 & addr[0]);
